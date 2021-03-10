@@ -1,4 +1,4 @@
-package com.example.demo.uss.domain;
+package com.example.demo.article.domain;
 
 import java.io.Serializable;
 
@@ -8,13 +8,12 @@ import lombok.Data;
 
 @Component
 @Data
-public class User implements Serializable{
-        
+public class Article implements Serializable {
     private static final long serialVersionUID = 1L;
+    private long articleNo;
     private long userNo;
-    private String userId;
-    private String password;
-    private String username;
-    private String email;
+    private String title;
+    private String content;
+    private String regdate;
 
 }

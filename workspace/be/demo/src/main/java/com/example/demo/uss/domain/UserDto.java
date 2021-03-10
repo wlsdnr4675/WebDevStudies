@@ -2,7 +2,9 @@ package com.example.demo.uss.domain;
 
 import org.springframework.stereotype.Component;
 
-@Component
+import lombok.Getter;
+import lombok.Setter;
+
 public class userDto {
     private String username;
     private String password;

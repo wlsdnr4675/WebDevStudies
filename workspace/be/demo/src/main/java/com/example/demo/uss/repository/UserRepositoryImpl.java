@@ -2,6 +2,7 @@ package com.example.demo.uss.repository;
 
 import org.springframework.stereotype.Repository;
 
-public interface UserRepository {
+@Repository
+public class UserRepositoryImpl implements UserRepository {
 
 }
