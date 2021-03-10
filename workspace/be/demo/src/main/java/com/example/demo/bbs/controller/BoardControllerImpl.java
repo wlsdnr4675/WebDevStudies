@@ -10,9 +10,4 @@ public class BoardControllerImpl implements BoardController {
     @Autowired
     Board board;
 
-    public void test() {
-        board.getBoardNo();
-        board.getBoardName();
-    }
-
 }

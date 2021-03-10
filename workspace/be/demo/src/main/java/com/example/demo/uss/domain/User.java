@@ -8,9 +8,10 @@ import lombok.Data;
 
 @Component
 @Data
-public class User implements Serializable{
-        
+public class User implements Serializable {
+
     private static final long serialVersionUID = 1L;
+    
     private long userNo;
     private String userId;
     private String password;
