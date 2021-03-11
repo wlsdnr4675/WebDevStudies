@@ -1,5 +1,5 @@
 package com.example.demo.article.repository;
 
-public class ArticleRepositoryImpl implements ArticleRepository {
+public class ArticleRepositoryImpl /* mplements ArticleRepository */ {
 
 }

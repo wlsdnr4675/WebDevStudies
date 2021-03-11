@@ -1,21 +1,27 @@
 package com.example.demo.uss.domain;
 
-import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-import org.springframework.stereotype.Component;
+@Entity
+@Table(name = "users")
+public class User {
 
-import lombok.Data;
+    @Id
+    @GeneratedValue
 
-@Component
-@Data
-public class User implements Serializable {
-
-    private static final long serialVersionUID = 1L;
-    
+    @Column(name = "user_no")
     private long userNo;
+    @Column(name = "user_id")
     private String userId;
+    @Column(name = "password")
     private String password;
-    private String username;
+    @Column(name = "user_name")
+    private String userName;
+    @Column(name = "email")
     private String email;
 
 }

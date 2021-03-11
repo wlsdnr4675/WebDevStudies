@@ -1,12 +1,21 @@
 package com.example.demo.uss.domain;
 
+import java.io.Serializable;
+
 import org.springframework.stereotype.Component;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-public class userDto {
-    private String username;
+@Component
+@Data
+public class UserDto implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    private long userNo;
+    private String userId;
     private String password;
-    private char enabled;
+    private String username;
+    private String email;
+
 }

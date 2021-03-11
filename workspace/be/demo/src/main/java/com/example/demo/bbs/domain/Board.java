@@ -2,16 +2,25 @@ package com.example.demo.bbs.domain;
 
 import java.io.Serializable;
 
-import org.springframework.stereotype.Component;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-import lombok.Data;
 
-@Component
-@Data
-public class Board implements Serializable {
-    private static final long serialVersionUID = 1L;
+
+@Entity
+@Table(name = "boards")
+public class Board {
+
+    @Id
+    @GeneratedValue
+    @Column(name = "board_no")
     private long boardNo;
+    @Column(name = "user_no")
     private long userNo;
-    private String boardname;
+    @Column(name = "board_name")
+    private String boardName;
 
 }

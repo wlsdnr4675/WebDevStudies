@@ -1,7 +1,13 @@
 package com.example.demo.bbs.repository;
 
-import org.springframework.stereotype.Repository;
+import com.example.demo.bbs.domain.Board;
 
-public interface BoardRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+interface BoardCustomRepository {
+
+}
+
+public interface BoardRepository extends JpaRepository<Board, Long>, BoardCustomRepository {
 
 }
