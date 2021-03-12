@@ -1,6 +1,6 @@
-package com.example.demo.article.repository;
+package com.example.demo.bbs.repository;
 
-import com.example.demo.article.domain.Article;
+import com.example.demo.bbs.domain.Article;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

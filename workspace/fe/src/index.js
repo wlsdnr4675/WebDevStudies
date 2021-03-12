@@ -4,11 +4,12 @@ import './index.css';
 import App from './App';
 import Login from './cmm/component/Login'
 import SignUp from "./uss/component/SignUp";
-import reportWebVitals from './reportWebVitals';
-
+import reportWebVitals from './reportWebVitals'; 
+import UserDetail from './uss/component/UserDetail'
+import UserList from './uss/component/UserList'
 ReactDOM.render(
   <React.StrictMode>
-    <Login/>
+    <UserList/>
   </React.StrictMode>,
   document.getElementById('root')
 );
