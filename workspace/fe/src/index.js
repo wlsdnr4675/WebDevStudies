@@ -7,9 +7,14 @@ import SignUp from "./uss/component/SignUp";
 import reportWebVitals from './reportWebVitals'; 
 import UserDetail from './uss/component/UserDetail'
 import UserList from './uss/component/UserList'
+import UserEdit from './uss/component/UserEdit'
+import ArticleAdd from './bbs/component/ArticleAdd'
+import ArticleDetail from './bbs/component/ArticleAdd'
+import ArticleEdit from './bbs/component/ArticleAdd'
+import ArticleList from './bbs/component/ArticleAdd'
 ReactDOM.render(
   <React.StrictMode>
-    <UserList/>
+    <ArticleDetail/>
   </React.StrictMode>,
   document.getElementById('root')
 );
