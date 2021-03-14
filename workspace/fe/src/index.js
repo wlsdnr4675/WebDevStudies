@@ -9,12 +9,12 @@ import UserDetail from './uss/component/UserDetail'
 import UserList from './uss/component/UserList'
 import UserEdit from './uss/component/UserEdit'
 import ArticleAdd from './bbs/component/ArticleAdd'
-import ArticleDetail from './bbs/component/ArticleAdd'
-import ArticleEdit from './bbs/component/ArticleAdd'
-import ArticleList from './bbs/component/ArticleAdd'
+import ArticleDetail from './bbs/component/ArticleDetail'
+import ArticleEdit from './bbs/component/ArticleEdit'
+import ArticleList from './bbs/component/ArticleList'
 ReactDOM.render(
   <React.StrictMode>
-    <ArticleDetail/>
+    <ArticleList/>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,7 +1,8 @@
 import './SignUp.css';
 
 const SignUp = () => 
-(<>
+
+ (<>
     <form style={{border: "1px solid #ccc"}}>
   <div className="container">
     <h1>Sign Up</h1>

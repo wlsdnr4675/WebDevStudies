@@ -7,23 +7,23 @@ const ArticleDetail = () =>
     <table>
       <tr>
         <td>번호</td>
-        <td><input type="text" readonly/></td>
+        <td><input type="text" /></td>
       </tr>
       <tr>
         <td>등록일자</td>
-        <td><input type="text" readonly/></td>
+        <td><input type="text" /></td>
       </tr>
       <tr>
         <td>제목</td>
-        <td><input type="text" readonly/></td>
+        <td><input type="text" /></td>
       </tr>
       <tr>
         <td>작성자</td>
-        <td><input type="text" readonly/></td>
+        <td><input type="text" /></td>
       </tr>
       <tr>
         <td>본문</td>
-        <td><textarea rows="5" readonly></textarea></td>
+        <td><textarea rows="5" ></textarea></td>
       </tr>
     </table>
 
