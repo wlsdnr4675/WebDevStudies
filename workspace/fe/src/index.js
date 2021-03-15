@@ -1,20 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {  BrowserRouter } from 'react-router-dom'
 import './index.css';
 import App from './App';
-import Login from './cmm/component/Login'
-import SignUp from "./uss/component/SignUp";
+import Login from './sec/container/Login'
+import SignUp from "./uss/container/SignUp";
 import reportWebVitals from './reportWebVitals'; 
-import UserDetail from './uss/component/UserDetail'
-import UserList from './uss/component/UserList'
-import UserEdit from './uss/component/UserEdit'
+import UserDetail from './uss/container/UserDetail'
+import UserList from './uss/container/UserList'
+import UserEdit from './uss/container/UserEdit'
 import ArticleAdd from './bbs/component/ArticleAdd'
 import ArticleDetail from './bbs/component/ArticleDetail'
 import ArticleEdit from './bbs/component/ArticleEdit'
 import ArticleList from './bbs/component/ArticleList'
+import Counter from './cmm/container/Counter'
 ReactDOM.render(
   <React.StrictMode>
-    <ArticleList/>
+    <BrowserRouter>
+      <App/>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,21 +1,29 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Link} from 'react-router-dom'
+import React, { useState } from 'react';
+import {Route} from 'react-router-dom'
+import Counter from "./cmm/container/Counter";
+import Login from "./sec/container/Login";
+import SignUp from "./uss/container/SignUp";
+import Home from "./cmm/container/Home";
+
 
 
 
 import './App.css';
 
-const App = () => 
+const App = () => {
+
+  return (<>
+  
+  <Route path ="/" component={Home} exact></Route>
+  <Route path="/Counter" component={Counter}></Route>
+  <Route path="/Login" component={Login}></Route>
+  <Route path="/SignUp" component={SignUp}></Route>
+
+  </>)
+}
 
   
-    (<>
-    <Router>
-      <Link to={``}></Link>
-    <h1>홈페이지</h1>
-    <button>회원가입</button>
-    <button>로그인</button>
-    </Router>
-    </>)
+    
     
   
 

@@ -1,8 +1,8 @@
-import './SignUp.css';
+import '../component/SignUp.css';
 
-const SignUp = () => 
+const SignUp = () => {
 
- (<>
+return (<>
     <form style={{border: "1px solid #ccc"}}>
   <div className="container">
     <h1>Sign Up</h1>
@@ -31,6 +31,7 @@ const SignUp = () =>
   </div>
 </form>
 </>)
+}
 
 
 
