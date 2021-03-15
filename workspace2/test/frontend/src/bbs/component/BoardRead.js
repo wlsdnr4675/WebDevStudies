@@ -1,8 +1,8 @@
-const BoardReadPage = () =>
+import Router, { useState } from "react"
 
-(<>
-<form>
-<h3>게시글 보기</h3>
+const BoardRead = () => {
+  return (<>
+  <h3>게시글 보기</h3>
     <table>
       <tr>
         <td>번호</td>
@@ -25,9 +25,6 @@ const BoardReadPage = () =>
         <td><textarea rows="5" ></textarea></td>
       </tr>
     </table>
-
-
-</form>
-</>)
-
-export default BoardReadPage;
+  </>)
+}
+export default BoardRead;
