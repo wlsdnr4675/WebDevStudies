@@ -3,23 +3,19 @@ package com.example.demo.bss.service;
 import java.util.List;
 import java.util.Optional;
 
-import javax.persistence.Id;
-
-import com.example.demo.bss.domain.Board;
-import com.example.demo.bss.repositry.BoardRepositoryImpl;
+import com.example.demo.bss.domain.Article;
+import com.example.demo.bss.repositry.ArticleRepository;
 import com.example.demo.cmm.service.AbstractService;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-@Service
-public class BoardServiceImpl extends AbstractService<Board> {
+public class ArticleServieceImpl extends AbstractService<Article> {
 
     @Autowired
-    BoardRepositoryImpl repo;
+    ArticleRepository repo;
 
     @Override
-    public Optional<Board> findOne() {
+    public Optional<Article> findOne() {
         // TODO Auto-generated method stub
         return null;
     }
@@ -43,31 +39,31 @@ public class BoardServiceImpl extends AbstractService<Board> {
     }
 
     @Override
-    public Optional<Board> findById(long id) {
+    public Optional<Article> findById(long id) {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public List<Board> findAll() {
+    public List<Article> findAll() {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public List<Board> findAllById(Iterable<Long> ids) {
+    public List<Article> findAllById(Iterable<Long> ids) {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public Board save(Board entity) {
+    public Article save(Article entity) {
         // TODO Auto-generated method stub
         return null;
     }
 
     @Override
-    public Board getOne(long id) {
+    public Article getOne(long id) {
         // TODO Auto-generated method stub
         return null;
     }

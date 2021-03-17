@@ -16,5 +16,8 @@ import lombok.extern.java.Log;
 @Repository
 @Log
 public class BoardRepositoryImpl /* implements BoardRepository */ {
+    public long count() {
+        return 0;
+    }
 
 }
