@@ -3,7 +3,6 @@ package com.example.demo.bss.service;
 import java.util.List;
 import java.util.Optional;
 
-import javax.persistence.Id;
 
 import com.example.demo.bss.domain.Board;
 import com.example.demo.bss.repositry.BoardRepositoryImpl;
