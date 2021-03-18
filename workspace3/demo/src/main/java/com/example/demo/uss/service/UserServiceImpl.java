@@ -5,13 +5,16 @@ import java.util.Optional;
 
 import com.example.demo.cmm.service.AbstractService;
 import com.example.demo.uss.domain.User;
+import com.example.demo.uss.domain.UserDto;
 import com.example.demo.uss.repository.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserServiceImpl extends AbstractService<User> {
+public class UserServiceImpl extends AbstractService<User> implements UserService {
 
     @Autowired
     UserRepository repo;
@@ -70,4 +73,21 @@ public class UserServiceImpl extends AbstractService<User> {
         return null;
     }
 
+    // UserDetailsService 의 메소드
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+
+        UserDto user = repo.findByUsername(username);
+        if (user == null) {
+            throw new UsernameNotFoundException(String.format("No user found with username '%s'.", username));
+        } else {
+            return user;
+        }
+    }
+
+    @Override
+    public UserDto login(String username, String password) {
+        UserDto user = repo.login(username, password);
+        return null;
+    }
 }
