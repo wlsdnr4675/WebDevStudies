@@ -1,6 +1,19 @@
 import '../component/SignUp.css';
+import React from 'react'
+import axios from 'axios';
 
 const SignUp = () => {
+
+  const insertMany = () => {
+    alert('더미데이터 입력')
+    axios.get(`/auth/insertMany`)
+    .then(res => {
+      alert(`${res.data.message}명 등록됨`)
+    })
+    .catch(err => {
+      alert("FAILURE")
+    })
+  }
 
 return (<>
     <form style={{border: "1px solid #ccc"}}>
@@ -26,7 +39,7 @@ return (<>
 
     <div className="clearfix">
       <button type="button" className="cancelbtn">Cancel</button>
-      <button type="submit" className="signupbtn">Sign Up</button>
+      <button type="submit" className="signupbtn" onClick={insertMany}>Sign Up</button>
     </div>
   </div>
 </form>
