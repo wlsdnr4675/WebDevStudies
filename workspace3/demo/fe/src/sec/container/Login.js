@@ -3,6 +3,7 @@ import React,{ useState } from 'react';
 
 
 const Login =  ()  => {
+
     const [uname, setUname] = useState()
     const [upwd, setUpwd] = useState()
     const onSubmit = () => [setUname(uname), setUpwd(upwd)]
@@ -15,10 +16,10 @@ const Login =  ()  => {
       
         <div class="container">
           <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder={uname} name="uname" required/>
+          <input type="text" placeholder={uname} name="uname" />
       
           <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder={upwd} name="psw" required/>
+          <input type="password" placeholder={upwd} name="psw" />
               
           <button type="submit" onClick={onSubmit}>Login</button>
           <label>
