@@ -24,10 +24,9 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 // JWT인증사용하므로 세션 사용
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and().authorizeRequests()
-                .antMatchers("/*/login", "/*/signUp").permitAll().anyRequest().hasRole("USER") // 가입 및 인증 주소는 누구나 접근가능
-                .and().exceptionHandling().authenticationEntryPoint(new CustomAuthenticationEntryPoint()).and()
-                .addFilterBefore(new JwtAuthenticationFilter(jwtTokenProvider),
-                        UsernamePasswordAuthenticationFilter.class);
+                .antMatchers("/*/login", "/*/SignUp").permitAll().anyRequest().hasRole("USER").and().exceptionHandling()
+                .authenticationEntryPoint(new CustomAuthenticationEntryPoint()).and().addFilterBefore(
+                        new JwtAuthenticationFilter(jwtTokenProvider), UsernamePasswordAuthenticationFilter.class);
 
     }
 }

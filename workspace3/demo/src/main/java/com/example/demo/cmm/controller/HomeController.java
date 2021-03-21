@@ -10,15 +10,13 @@ import ch.qos.logback.core.net.SyslogOutputStream;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.java.Log;
 
-@Log
 @RequiredArgsConstructor
 @RestController("/")
-@CrossOrigin(origins = "http://localhost:3000/", allowedHeaders = "*")
 public class HomeController extends proxy {
 
-    @GetMapping("/")
+    @GetMapping("/init")
     public String init() {
-        log.info("getInit()");
+        print.accept("getInit()");
         print.accept("========================");
         print.accept("=== Boot Initialized ===");
         print.accept("========================");

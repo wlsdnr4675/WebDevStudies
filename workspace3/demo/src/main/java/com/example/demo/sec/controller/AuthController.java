@@ -10,6 +10,9 @@ import com.example.demo.util.proxy;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import lombok.extern.java.Log;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -18,13 +21,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
 @RequestMapping("/auth")
 public class AuthController extends proxy {
+
     // for Test
     @GetMapping("/insertMany")
     public String insertMany() {
-        print.accept("--------진입---------");
+        print.accept("insertMany");
         return "100";
     }
 

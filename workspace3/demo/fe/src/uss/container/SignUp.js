@@ -6,7 +6,7 @@ const SignUp = () => {
 
   const insertMany = () => {
     alert('더미데이터 입력')
-    axios.get(`http://localhost:8080/auth/insertMany`)
+    axios.get(`/auth/insertMany`)
     .then(res => {
       alert(`${res.data.message}명 등록됨`)
     })
@@ -38,10 +38,10 @@ return (<>
       <input type="checkbox" name="remember" style={{marginBottom:"15px"}}/> Remember me
     </label>
     
-    <p>By creating an account you agree to our <a href="#" style={{color:"dodgerblue"}}>Terms &amp; Privacy</a>.</p>
+    <p>By creating an account you agree to our <a href="/" style={{color:"dodgerblue"}}>Terms &amp; Privacy</a>.</p>
 
     <div className="clearfix">
-      <button type="button" className="cancelbtn">Cancel</button>
+      <button type="button" className="cancelbtn" href ="/">Cancel</button>
       <button type="submit" className="signupbtn" onClick={insertMany} >Sign Up</button>
     </div>
   </div>
