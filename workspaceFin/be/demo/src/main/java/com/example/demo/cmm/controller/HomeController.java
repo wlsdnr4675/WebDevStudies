@@ -11,15 +11,15 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.java.Log;
 
 @RequiredArgsConstructor
-@RestController("/")
-public class HomeController extends proxy {
+@RestController
+public class HomeController {
 
-    @GetMapping("/init")
+    @GetMapping("/")
     public String init() {
-        print.accept("getInit()");
-        print.accept("========================");
-        print.accept("=== Boot Initialized ===");
-        print.accept("========================");
+        System.out.println("getInit()");
+        System.out.println("========================");
+        System.out.println("=== Boot Initialized ===");
+        System.out.println("========================");
 
         return "Hello React";
     }

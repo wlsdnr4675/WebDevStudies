@@ -16,7 +16,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "users")
-
 public class User {
 
     @Id
@@ -44,5 +43,8 @@ public class User {
 
     @Column(name = "gender")
     private String gender;
+
+    @Column(name = "regdate")
+    private String regdate;
 
 }

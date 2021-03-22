@@ -1,5 +1,6 @@
 package com.example.demo.util;
 
+import java.util.Date;
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -20,6 +21,7 @@ public class proxy {
     public Function<Object, String> string = String::valueOf;
 
     public Function<String, Integer> str2int = Integer::parseInt;
+    // public Function<Integer, String> int2str = Integer::parseInt;
 
     public Function<Double, Double> absD = Math::abs;
     public Function<Float, Float> absF = Math::abs;
@@ -40,7 +42,9 @@ public class proxy {
     public BiFunction<Integer, Integer, Integer> minI = Math::min;
     public BiFunction<Long, Long, Long> minL = Math::min;
 
-    public Supplier<Double> randomF = Math::random;
+    public Supplier<Double> randomD = Math::random;
+    public static BiFunction<Integer, Integer, Integer> rangeRandom = (t, u) -> (int) (Math.random() * (u - t)) + t;
+    // (int)(Math.random()*(u-t)) + t ;
 
     public Function<Double, Double> rintD = Math::rint;
 
@@ -51,5 +55,7 @@ public class proxy {
     public Supplier<Admin> newAdmin = Admin::new;
     public Supplier<Article> newArticle = Article::new;
     public Supplier<Board> newBoard = Board::new;
+
+    public static Supplier<Date> regdate = Date::new;
 
 }
