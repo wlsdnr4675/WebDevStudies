@@ -9,6 +9,9 @@ import static com.example.demo.util.proxy.*;
 import static java.util.Collections.*;
 
 import java.sql.Date;
+import java.text.DateFormat;
+import java.text.Format;
+import java.text.SimpleDateFormat;
 
 public class DummyGenerator {
     public String makeName() {
@@ -60,20 +63,35 @@ public class DummyGenerator {
     }
 
     public String makeBirthday() {
-        int date = rangeRandom.apply(1, 30);
-        int date2 = rangeRandom.apply(1, 31);
-        int date3 = rangeRandom.apply(1, 29);
-        int date4 = rangeRandom.apply(1, 28);
-        int month = rangeRandom.apply(1, 12);
-        int year = rangeRandom.apply(1970, 2000);
+        return myCalendar(1970, 2020);
+    }
 
-        if (year % 4 == 0 && year % 10 != 0 || year % 400 == 0) {
-            List<Integer> years = Arrays.asList(year);
-        } else {
-            List<Integer> years1 = Arrays.asList(year);
+    private String myCalendar(int start, int end) {
+        int year = rangeBelowRandom.apply(start, end);
+        int month = rangeBelowRandom.apply(1, 12);
+        int date30 = rangeBelowRandom.apply(1, 30);
+        int date31 = rangeBelowRandom.apply(1, 31);
+        int date29 = rangeBelowRandom.apply(1, 29);
+        int date28 = rangeBelowRandom.apply(1, 28);
+        int date = 0;
+        switch (month) {
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            date = date30;
+            break;
+        case 2:
+            date = (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) ? date29 : date28;
+            break;
+        default:
+            date = date31;
+            break;
         }
 
-        return "";
+        // return Integer.toString(year) + "-" + Integer.toString(month) + "-" +
+        // Integer.toString(date);
+        return year + "-" + month + "-" + date;
     }
 
     public String makeGender() {
@@ -83,11 +101,10 @@ public class DummyGenerator {
     }
 
     public String makeRegdate() {
-
-        return "";
+        return myCalendar(2019, 2020);
     }
 
     public User makeUser() {
-        return null;
+        return new User(makeName(), makeUsername(), "1", makeEmail(), makeBirthday(), makeGender(), makeRegdate());
     }
 }

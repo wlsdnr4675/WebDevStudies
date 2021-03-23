@@ -4,21 +4,22 @@ import axios from 'axios';
 
 const SignUp = () => {
 
-  const insertMany = () => {
-    alert('더미데이터 입력')
-    axios.get(`/auth/insertMany`)
-    .then(res => {
-      alert(`${res.data.message}명 등록됨`)
-    })
-    .catch(err => {
-      alert("FAILURE")
-    })
-  }
+    const insertMany = e => {
+      e.preventDefault()
+      alert(`클릭 1`)
+      axios.get(`http://localhost:8080/auth/insertMany`)
+      .then(res => {
+          alert(`클릭 2: ${JSON.stringify(res.data)}`)
+      })
+      .catch(err => {
+        alert(`클릭 3: ${err}`)
+      })
+    }
 
 return (<>
     <form style={{border: "1px solid #ccc"}}>
   <div className="container">
-    <h1>Sign Up</h1>
+    <h1>Sign Up</h1> <button onClick={insertMany}>더미데이터 입력</button>
     <p>Please fill in this for to create an account.</p>
     <hr/>
 
@@ -42,7 +43,7 @@ return (<>
 
     <div className="clearfix">
       <button type="button" className="cancelbtn" href ="/">Cancel</button>
-      <button type="submit" className="signupbtn" onClick={insertMany} >Sign Up</button>
+      <button type="submit" className="signupbtn"  >Sign Up</button>
     </div>
   </div>
 </form>

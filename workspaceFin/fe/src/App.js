@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Counter from './cmm/container/Counter'
+import Login from './sec/container/Login'
+import SignUp from './uss/container/SignUp'
+import Home from './cmm/container/Home'
+import {Route} from 'react-router-dom'
+const App = () => {
+  return(<>
+  <Route path="/" component={Home} exact/>
+  <Route path="/Counter" component={Counter}/>
+  <Route path="/Login" component={Login}/>
+  <Route path="/SignUp" component={SignUp}/>
+  </>)
 }
 
-export default App;
+export default App

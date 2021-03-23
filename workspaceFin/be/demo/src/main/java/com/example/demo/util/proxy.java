@@ -43,7 +43,9 @@ public class proxy {
     public BiFunction<Long, Long, Long> minL = Math::min;
 
     public Supplier<Double> randomD = Math::random;
-    public static BiFunction<Integer, Integer, Integer> rangeRandom = (t, u) -> (int) (Math.random() * (u - t)) + t;
+    public static BiFunction<Integer, Integer, Integer> rangeUnderRandom = (t, u) -> (int) (Math.random() * (u - t))
+            + t;
+    public static BiFunction<Integer, Integer, Integer> rangeBelowRandom = (t, u) -> (int) (Math.random() * u) + t;
     // (int)(Math.random()*(u-t)) + t ;
 
     public Function<Double, Double> rintD = Math::rint;

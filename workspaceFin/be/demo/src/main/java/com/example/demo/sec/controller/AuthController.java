@@ -6,11 +6,14 @@ import java.util.Map;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import lombok.RequiredArgsConstructor;
+
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @RestController
 @RequestMapping("/auth")
+@RequiredArgsConstructor
 @CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
 public class AuthController {
     // for Test
@@ -28,4 +31,5 @@ public class AuthController {
     // Map<String, Object> map = new HashMap<>();
     // return new ResponseEntity<>(map, HttpStatus.OK);
     // }
+
 }

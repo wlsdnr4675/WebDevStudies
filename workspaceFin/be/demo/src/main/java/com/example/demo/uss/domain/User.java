@@ -3,24 +3,23 @@ package com.example.demo.uss.domain;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @Entity
-@AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "users")
 public class User {
 
     @Id
     @Column(name = "user_no")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue
     private long userNo;
 
     @Column(name = "username")
@@ -28,9 +27,6 @@ public class User {
 
     @Column(name = "password")
     private String password;
-
-    @Column(name = "authority")
-    private String authority;
 
     @Column(name = "name")
     private String name;
@@ -46,5 +42,17 @@ public class User {
 
     @Column(name = "regdate")
     private String regdate;
+
+    @Builder
+    public User(String name, String username, String password, String email, String birthday, String gender,
+            String regdate) {
+        this.name = name;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.birthday = birthday;
+        this.gender = gender;
+        this.regdate = regdate;
+    }
 
 }
