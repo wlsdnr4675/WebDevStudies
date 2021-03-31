@@ -15,15 +15,15 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 public class Board {
     @Id
     @GeneratedValue
-    @Column
+    @Column(name = "board_no")
     private long boardNo;
-    @Column
+    @Column(name = "title")
     private String title;
-    @Column
+    @Column(name = "content")
     private String content;
-    @Column
+    @Column(name = "writer")
     private String writer;
-    @Column
+    @Column(name = "reg_date")
     private Date regDate;
 
 }
