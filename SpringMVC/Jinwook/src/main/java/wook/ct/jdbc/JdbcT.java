@@ -9,15 +9,15 @@ class JdbcT
 	JdbcT(){
 		//(1) 오라클 드리이버 로딩 
 		try{
-			Class.forName("oracle.jdbc.driver.OracleDriver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			System.out.println("(1) 오라클 드리이버 로딩 성공");
 		}catch(ClassNotFoundException cf){
 			System.out.println("(1) 오라클 드리이버 로딩 실패");
 		}
 		//(2) 커넥션 생성 
 		try{
-			String url = "jdbc:oracle:thin:@127.0.0.1:1521:JAVA";
-			con = DriverManager.getConnection(url, "scott", "tiger");
+			String url = "jdbc:mysql://localhost/team_project?useSSLd=false&characterEncoding=UTF-8&serverTimezone=UTC";
+			con = DriverManager.getConnection(url, "root", "dkdlxl123");
 			System.out.println("(2) 오라클과 커넥션 생성 성공");
 		}catch(SQLException se){
 			System.out.println("(2) 오라클과 커넥션 생성 실패");
