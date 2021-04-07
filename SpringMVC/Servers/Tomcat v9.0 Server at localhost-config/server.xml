@@ -141,8 +141,6 @@
       </Realm>
 
       <Host appBase="webapps" autoDeploy="true" name="localhost" unpackWARs="true">
-      
-      <Context docBase="/Users/jinwookoh/project/WebDevStudies/jsp" path="/j" reloadable="true"/>
 
         <!-- SingleSignOn valve, share authentication between web applications
              Documentation at: /docs/config/valve.html -->
