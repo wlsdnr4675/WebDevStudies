@@ -140,9 +140,9 @@
         <Realm className="org.apache.catalina.realm.UserDatabaseRealm" resourceName="UserDatabase"/>
       </Realm>
 
-      <Host name="localhost" appBase="webapps" unpackWARs="true" autoDeploy="true">
+      <Host appBase="webapps" autoDeploy="true" name="localhost" unpackWARs="true">
       
-      <Context path="/j" docBase="/Users/jinwookoh/project/WebDevStudies/jsp" reloadable="true"/>
+      <Context docBase="/Users/jinwookoh/project/WebDevStudies/jsp" path="/j" reloadable="true"/>
 
         <!-- SingleSignOn valve, share authentication between web applications
              Documentation at: /docs/config/valve.html -->
@@ -155,7 +155,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="Jinwook" path="/" reloadable="true" source="org.eclipse.jst.jee.server:Jinwook"/></Host>
+      <Context docBase="Sp02" path="/controller" reloadable="true" source="org.eclipse.jst.jee.server:Sp02"/></Host>
     </Engine>
   </Service>
 </Server>

@@ -1,0 +1,69 @@
+<  1일차 복습 >
+(1) JSP ( View )  => ( jsp -> java -> class ) 
+    1) Fixed Tempate Data : HTML / XML 
+    2) JSP Elements 
+       <1> 지시어 (directive element) <%@ %>
+       <2> 스크립팅원소 ( Scripting Elements )
+           - Scriptlet <% %>
+	   - Declaration <%! %>
+	   - Expression <%= str%> == <% out.print(str); %>
+       <3> JSP액션==JSP표준태그 
+           <jsp:XXX />
+       <4> EL ( Expression Language )
+           ${}
+       <5> JSTL ( Java Standard Tag Library )
+           <c:XXX />
+	   
+	  cf) CTL 
+
+    3) Beans ( POJO )
+       <1> Data 
+       <2> Service 
+       <3> Visual Component
+
+    4) API 
+       <1> servlet 
+       <2> jsp 
+       <3> default: SE 
+
+(2) MVC ( Model(S+D) + View(JSP) + Controller(Servlet) )
+
+(3) Framework 
+    - FontEnd: jQuery, Bootstrap, AngularJs, React, ViewJs, .. 
+    - BackEnd: Spring(M+C), Struts(C) 
+    - ORM: MyBatis, Hibernate, ..
+
+(4) DBMS: DB를 관리하는 SW    
+    - Oracle: 대용량  
+    - Mysql: 중소요량 
+    - Mssql: .net 
+
+(5) DB: 데이터의 집합 
+
+(6) Spring (  C) 
+    1) Spring MVC Pj 구조 
+       - main/src : java ( C + M )
+       - main/resouces : xml ( log, mybatis, .. ) 
+       - test/src : java for junit 
+       - test/resouces : xml for junit 
+       - Lib( JDK + Spring )
+       - src/main/webapps/WEB-INF/views : jsp 
+       - src/main/webapps/resources : css, js, imgs, audio, video
+        
+    2) 설정 xml 
+       - web.xml 
+       - root-context.xml
+       - servlet-context.xml
+       - pom.xml
+
+    3) 컨트롤러 
+      @Conroller
+      @RequestMapping
+
+
+      
+
+     
+    
+ 
+ 

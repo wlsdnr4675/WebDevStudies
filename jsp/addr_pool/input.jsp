@@ -14,7 +14,7 @@
 <body onload="document.f.name.focus()">
 <center>
    <h1>
-		Address Input 
+		Address Input Pool
    </h1>
    <form name="f" action="insert.jsp" method="post">
        <table border="1" width="300" height="200">

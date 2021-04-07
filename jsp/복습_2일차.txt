@@ -1,0 +1,50 @@
+<  2일차 복습 >
+
+(1) Spring Controller 
+    V <-> C <-> M <-> DB
+    
+    - paramter
+    - response format 
+      - jsp (동기식)
+      - text / xml / json (비동기식)
+
+(2) Data Format 
+    1) text
+	홍길동|27|서울시 
+
+    2) xml 
+	<member>
+	  <name age="27">홍길동</name>
+	  <addr>서울시</addr>
+	</member>
+
+    3) json 
+	{"name":"홍길동", "age":27, "addr":"서울시"} 
+
+     cf) js Obj 
+	{name:"홍길동", age:27, addr:"서울시"}
+	
+(3) 동기/비동기
+    1) 동기: 전체화면갱신 ( html 문서 전체를 갱신 )
+    2) 비동기: 부분갱신 ( data만 전달 )
+       ex) 자동완성기능 
+
+(4) Oracle 
+   SID: JAVA
+
+(5) 톰켓 Context 등록
+   - conf/server.xml 
+   <Context path="/j" docBase="C:/SOO/jsp" reloadable="true"/>
+
+(6) JDBC ( java.sql.* )
+   ex) JdbcT.java
+
+(7) JSP LifeCycle 
+   1) jspInit()  
+   2) _jspService()
+   3) jspDestroy() 
+
+   
+
+
+
