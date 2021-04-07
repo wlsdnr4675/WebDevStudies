@@ -17,7 +17,7 @@
 
    3> pageContext - "EL에서 JSP디폴트객체 접근시 사용" 
 
-   4>      pageScope >   ㅇㅣ 순서대로 파워가쎄다 
+   4>  pageScope >   ㅇㅣ 순서대로 파워가쎄다 
 	  requestScope > 
 	  sessionScope  >
 	  applicationScope 

@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Address {
+	
 	 private long seq;
 	 private String name;
 	 private String addr;

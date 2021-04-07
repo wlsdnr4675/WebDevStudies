@@ -21,12 +21,12 @@ public class AddressMapperTests {
 //		log.info("#AddressMapperTests testList() : " + addressMapper.list());
 //	}
 //	
-	@Test
-	public void testInsert() {
-		Address address = new Address(-1, "힘든22", "세팅2", null);
-		addressMapper.insert(address);
-		log.info("#AddressMapperTests insert() :");
-	}
+//	@Test
+//	public void testInsert() {
+//		Address address = new Address(-1, "힘든22", "세팅2", null);
+//		addressMapper.insert(address);
+//		log.info("#AddressMapperTests insert() :");
+//	}
 //	
 //	@Test
 //	public void testDelete() {
@@ -34,5 +34,19 @@ public class AddressMapperTests {
 //		addressMapper.delete(seq);
 //		log.info("#AddressMapperTests delete() 수행완료");
 //	}
+	
+//	@Test
+//	public void testRead() {
+//		long seq = 10L;
+//		addressMapper.read(seq);
+//	}
+	
+	@Test
+	public void testUpdate() {
+		long seq =10L;
+		Address address = new Address(10L, "tq", "tq2", null);
+		addressMapper.update(address);
+	}
+	
 
 }
