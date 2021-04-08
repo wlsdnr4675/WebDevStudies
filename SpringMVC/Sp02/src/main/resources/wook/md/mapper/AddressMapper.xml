@@ -15,7 +15,4 @@
 	<delete id="delete" parameterType="long">
 	    delete from ADDRESS where SEQ= #{SEQ}
 	</delete>
-	<update id="update" parameterType="Address">
-		update ADDRESS set name = #{name}, addr = #{addr}, rdate= now() Where SEQ = #{SEQ}
-	</update>
 </mapper>

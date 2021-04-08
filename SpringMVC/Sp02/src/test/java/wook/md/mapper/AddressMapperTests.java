@@ -15,11 +15,11 @@ public class AddressMapperTests {
 	@Autowired
 	private AddressMapper addressMapper;
 	
-//	@Test
-//	public void testList() {
-//		log.info("#AddressMapperTests addressMapper : " + addressMapper);
-//		log.info("#AddressMapperTests testList() : " + addressMapper.list());
-//	}
+	@Test
+	public void testList() {
+		log.info("#AddressMapperTests addressMapper : " + addressMapper);
+		log.info("#AddressMapperTests testList() : " + addressMapper.list());
+	}
 //	
 //	@Test
 //	public void testInsert() {
@@ -41,12 +41,12 @@ public class AddressMapperTests {
 //		addressMapper.read(seq);
 //	}
 	
-	@Test
-	public void testUpdate() {
-		long seq =10L;
-		Address address = new Address(10L, "tq", "tq2", null);
-		addressMapper.update(address);
-	}
-	
+//	@Test
+//	public void testUpdate() {
+//		long seq =10L;
+//		Address address = new Address(10L, "tq", "tq2", null);
+//		addressMapper.update(address);
+//	}
+//	
 
 }
