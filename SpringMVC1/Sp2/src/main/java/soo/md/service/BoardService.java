@@ -9,7 +9,7 @@ public interface BoardService {
 	List<Board> listS();
 	Board readS(long seq);
 	void insertS(Board board);
-	Board updateS(long seq);
+	void updateS (Board board);
 	void deleteS(long seq);
 	
 }

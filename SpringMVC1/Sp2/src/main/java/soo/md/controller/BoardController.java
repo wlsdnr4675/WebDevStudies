@@ -54,13 +54,16 @@ public class BoardController {
 	
 	@GetMapping("update.do")
 	public ModelAndView update(long seq) {
+		Board board =  boardService.readS(seq);
 		
-		return new ModelAndView("board/update", "update", boardService.readS(seq));
+		return new ModelAndView("board/update", "update", board);
 		
 	}
 	@PostMapping("update.do")
-	public String update(Board board, long seq ) {
-		Board b = boardService.updateS(seq);
+	public String update(Board board, long seq) {
+		board.getSeq();
+		boardService.updateS(board);
+	
 		return "redirect:list.do";
 	}
 	

@@ -10,6 +10,6 @@ public interface BoardMapper {
 	List<Board> boardList();
 	Board boardRead(long seq);
 	void boardInsert(Board board);
-	Board boardUpdate(long seq);
+	void boardUpdate(Board board);
 	void boardDelete(long seq);
 }

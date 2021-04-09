@@ -34,10 +34,10 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
-	public Board updateS(long seq) {
+	public void updateS(Board board) {
 		// TODO Auto-generated method stub
 		
-		return boardMapper.boardUpdate(seq);
+		boardMapper.boardUpdate(board);
 	}
 
 	@Override
