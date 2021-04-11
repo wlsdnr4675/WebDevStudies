@@ -14,4 +14,6 @@ public interface BoardService {
 	void updateS (Board board);
 	void deleteS(long seq);
 	
+	int countBoardListTotal();
+	
 }

@@ -47,6 +47,13 @@ public class BoardServiceImpl implements BoardService {
 		// TODO Auto-generated method stub
 		boardMapper.boardDelete(seq);
 	}
+
+	@Override
+	public int countBoardListTotal() {
+		// TODO Auto-generated method stub
+		return boardMapper.countBoardList();
+		
+	}
 	
 	
 

@@ -18,4 +18,5 @@ public interface BoardMapper {
 	void boardInsert(Board board);
 	void boardUpdate(Board board);
 	void boardDelete(long seq);
+	int countBoardList();
 }

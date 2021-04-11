@@ -52,18 +52,16 @@
 <hr width='600' size='2' color='gray' noshade>
 <font color='gray' size='3' face='휴먼편지체'>
 
- <c:if test="${pm.prev }">
-    <li>
-        <a href='<c:url value="list.do?page=${pm.startPage-1 }"/>'><i class="fa fa-chevron-left"></i></a>
-    </li>
-    </c:if>
+    (총페이지수 : ${pagemaker.endPage})
+    &nbsp;&nbsp;&nbsp;
 
-<c:forEach begin="${pm.startPage }" end="${pm.endPage }" var="pageNum">
+<c:forEach begin="${pagemaker.startPage }" end="${pagemaker.endPage}" var="pageNum">
+        <a href='<c:url value="list.do?page=${pageNum }"/>'>
 
-    (총페이지수 : 3)
- <a href='<c:url value="list.do?page=${pageNum}"/>'>${pageNum}</a>
-
- </c:forEach>
+                	<strong>${pageNum}</strong>
+    	</a>&nbsp;
+  </c:forEach>
+    ( TOTAL : ${pagemaker.totalCount})
     
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        페이지 싸이즈 : 

@@ -8,6 +8,10 @@
 		SELECT * FROM board ORDER BY seq desc LIMIT #{pageStart}, #{perPageNum}
 
 	</select>
+	<select id="countBoardList" resultType="Integer">
+    <![CDATA[ SELECT count(*) FROM board ]]>
+</select>
+
 	<select id="boardRead" parameterType="long" resultType="Board">
 		SELECT * FROM board WHERE seq = #{seq}
 	</select>

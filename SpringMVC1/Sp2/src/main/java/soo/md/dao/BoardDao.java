@@ -7,9 +7,11 @@ import soo.md.domain.Board;
 import soo.md.page.pagination;
 
 public interface BoardDao {
-	List<Map<String,Object>> boardList(pagination cri);
+	
+	public List<Map<String, Object>> boardList(pagination cri);
 	Board boardRead(long seq);
 	void boardInsert(Board board);
 	void Boardelete(long seq);
 	void boardUpdate(Board board);
+	int countBoardList();
 }

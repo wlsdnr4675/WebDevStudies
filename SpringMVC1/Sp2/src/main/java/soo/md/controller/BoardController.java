@@ -34,7 +34,7 @@ public class BoardController {
 		List<Map<String,Object>> list = boardService.listS(cri);
 		pagemaker pm = new pagemaker();
 		pm.setCri(cri);
-		pm.setTotalCount(100);
+		pm.setTotalCount(boardService.countBoardListTotal());
 		
 		mv.addObject("list", list);
 		mv.addObject("pagemaker", pm);
