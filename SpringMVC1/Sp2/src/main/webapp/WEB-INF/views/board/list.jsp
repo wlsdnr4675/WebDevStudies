@@ -51,37 +51,19 @@
 </TABLE>
 <hr width='600' size='2' color='gray' noshade>
 <font color='gray' size='3' face='휴먼편지체'>
+
+ <c:if test="${pm.prev }">
+    <li>
+        <a href='<c:url value="list.do?page=${pm.startPage-1 }"/>'><i class="fa fa-chevron-left"></i></a>
+    </li>
+    </c:if>
+
+<c:forEach begin="${pm.startPage }" end="${pm.endPage }" var="pageNum">
+
     (총페이지수 : 3)
-    &nbsp;&nbsp;&nbsp;
-    
-        <a href="list.do?cp=1">
-            
-                
-                	<strong>1</strong>
-                
-                
-            
-    	</a>&nbsp;
-    
-        <a href="list.do?cp=2">
-            
-                
-                
-                    2 
-                
-            
-    	</a>&nbsp;
-    
-        <a href="list.do?cp=3">
-            
-                
-                
-                    3 
-                
-            
-    	</a>&nbsp;
-    
-    ( TOTAL : 9 )
+ <a href='<c:url value="list.do?page=${pageNum}"/>'>${pageNum}</a>
+
+ </c:forEach>
     
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        페이지 싸이즈 : 

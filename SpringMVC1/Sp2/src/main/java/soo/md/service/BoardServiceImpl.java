@@ -1,12 +1,14 @@
 package soo.md.service;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import soo.md.domain.Board;
 import soo.md.mapper.BoardMapper;
+import soo.md.page.pagination;
 
 @Service
 public class BoardServiceImpl implements BoardService {
@@ -15,9 +17,9 @@ public class BoardServiceImpl implements BoardService {
 	private BoardMapper boardMapper;
 
 	@Override
-	public List<Board> listS() {
+	public List<Map<String,Object>> listS(pagination cri) {
 		// TODO Auto-generated method stub
-		return boardMapper.boardList();
+		return boardMapper.boardList(cri);
 	}
 
 	@Override
