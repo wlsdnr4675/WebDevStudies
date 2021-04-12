@@ -16,7 +16,7 @@
    <h1>
 		Address WriteForm with SpringMVC 
    </h1>
-   <form name="f" action="write.do" method="post">
+   <form name="f" action="write.do" method="post" enctype="multipart/form-data"> 
        <table border="1" width="300" height="200">
 	      <tr>
 		     <td width="30%" colspan="2" align="center"><h2>입력폼</h2></td> 
@@ -28,6 +28,26 @@
 		  <tr>
 		     <th width="30%">주소</th> 
 			 <td><input name="addr" size="20" align="center"></td>
+		  </tr>
+		  <tr>
+		     <th width="30%">File</th> 
+			 <td>
+			 <div>
+		      <input type='file' name='files'>
+		     </div>
+			 <div>
+			   <input type='file' name='files'>
+			 </div>
+			 <div>
+			   <input type='file' name='files'>
+			 </div>
+			 <div>
+			   <input type='file' name='files'>
+			 </div>
+			 <div>
+			   <input type='file' name='files'>
+			 </div>
+			 </td>
 		  </tr>
 		  <tr>
 		     <td colspan="2" align="center">

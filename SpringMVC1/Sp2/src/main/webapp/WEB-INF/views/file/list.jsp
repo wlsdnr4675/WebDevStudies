@@ -25,7 +25,7 @@
 	    <h1>FileUpload with Spring5</h1>
 	    <a href="form.do">업로드 폼</a>
 	    &nbsp;&nbsp;&nbsp;&nbsp;
-	    <a href="form_mt">업로드 폼(멀티)</a>
+	    <a href="form_mt.do">업로드 폼(멀티)</a>
 	    &nbsp;&nbsp;&nbsp;&nbsp;
 	    <a href="../">인덱스
 	    <br/><br/>
@@ -45,7 +45,7 @@
 	           <c:forEach items="${files}" var="file">
 	           <tr>
 	             <td align="center">
-	               <a href="download?fname=${file.name}">${file.name}</a>
+	               <a href="download.do?fname=${file.name}">${file.name}</a>
 	             </td>
 	             <td align="center">${file.length()}</td>
 	             <td align="center">

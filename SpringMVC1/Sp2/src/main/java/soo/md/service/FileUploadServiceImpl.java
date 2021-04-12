@@ -3,6 +3,7 @@ package soo.md.service;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -16,6 +17,7 @@ public class FileUploadServiceImpl  implements FileUploadService{
 
 	@Override
 	public String saveStore(MultipartFile file) {
+		
 		String ofname = file.getOriginalFilename();
 		int idx = ofname.lastIndexOf(".");
 		String ofheader = ofname.substring(0,idx);
@@ -32,9 +34,10 @@ public class FileUploadServiceImpl  implements FileUploadService{
 		
 		long fsize = file.getSize();
 		log.info("#ofname: " +ofname + " #saveFileName: " + saveFileName +" #fileSize: " + fsize);
-		boolean flag =  writeFile(file, saveFileName); 
+		boolean flag =  writeFile(file, saveFileName);
 		if(flag) {
 			log.info("#업로드 성공 ");
+			//dao에서 ofname, saveFileName, fsize 정보를 겨주는 메소드 만들어야함 + DTO board넣어주기
 		}else {
 			log.info("#업로드 실패 ");
 		}
