@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -38,11 +40,15 @@ public class FileUploadServiceImpl  implements FileUploadService{
 		if(flag) {
 			log.info("#업로드 성공 ");
 			//dao에서 ofname, saveFileName, fsize 정보를 겨주는 메소드 만들어야함 + DTO board넣어주기
+			Map<String, Object> pram = new HashMap<>();
+            pram.put("OFNAME", ofname);
+            pram.put("SFNAME", saveFileName);
+            pram.put("FSIZE", fsize);
 		}else {
 			log.info("#업로드 실패 ");
 		}
 		
-		return Path.FILE_STORE +saveFileName;
+		return Path.FILE_STORE + saveFileName;
 	}
 
 	@Override

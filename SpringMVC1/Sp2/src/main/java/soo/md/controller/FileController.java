@@ -30,7 +30,6 @@ import soo.md.service.FileUploadService;
 public class FileController {
 	
 	private FileUploadService service;
-	private ResourceLoader resourceLoader;
 	
 	@GetMapping("form.do")
 	public String form() {

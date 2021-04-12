@@ -8,8 +8,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.multipart.MultipartFile;
+
 import com.zaxxer.hikari.HikariDataSource;
 import lombok.extern.log4j.Log4j;
 import soo.md.domain.Address;
@@ -89,5 +93,12 @@ public class AddressDaoImpl implements AddressDao {
 				if(con != null) con.close();
 			}catch(SQLException se){}
 		}
+	}
+
+	@Override
+	public long insertFile(Map<String, Object> pram) {
+		// TODO Auto-generated method stub
+		return (long) 0.0;
+		
 	}
 }
