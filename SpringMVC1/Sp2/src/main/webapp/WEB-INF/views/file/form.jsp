@@ -13,7 +13,7 @@
 	</head>
 	<body style="text-align:center">
 		<h1>Fileupload Form</h1>
-		<form action="/file/upload"  method="post" enctype="multipart/form-data">
+		<form action="/file/upload.do"  method="post" enctype="multipart/form-data">
 					이름: <input name="name"><br/>
 				파일: <input type='file' name='file'><br/>
 			<input type='submit' value="전송">

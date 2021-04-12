@@ -10,4 +10,8 @@ public class IndexController {
 	public String m() {
 		return "index";
 	}
+	@RequestMapping("index.do")
+	public String m_index() {
+		return "index";
+	}
 }
