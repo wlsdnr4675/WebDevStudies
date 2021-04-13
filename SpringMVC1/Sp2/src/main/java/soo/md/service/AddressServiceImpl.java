@@ -95,7 +95,7 @@ public class AddressServiceImpl implements AddressService {
 	}
 	private boolean writeFile(MultipartFile file, String saveFileName) {
 		File dir = new File(Path.FILE_STORE); //저장소 경로 객체 
-		if(!dir.exists()) dir.mkdir();
+		if(!dir.exists()) dir.mkdirs();
 		
 		FileOutputStream fos = null;
 		try {

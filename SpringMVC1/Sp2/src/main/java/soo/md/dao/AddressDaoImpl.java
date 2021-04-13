@@ -95,10 +95,4 @@ public class AddressDaoImpl implements AddressDao {
 		}
 	}
 
-	@Override
-	public long insertFile(Map<String, Object> pram) {
-		// TODO Auto-generated method stub
-		return (long) 0.0;
-		
-	}
 }

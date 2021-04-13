@@ -12,5 +12,4 @@ public interface AddressDao {
 	List<Address> list();
 	void insert(Address address);
 	void delete(long seq);
-	long insertFile(Map<String, Object> pram);
 }

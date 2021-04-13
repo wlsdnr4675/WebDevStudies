@@ -8,38 +8,38 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class IndexController {
-	@GetMapping( "/")
+	@GetMapping("/")
 	public String index() {
 		return "index";
 	}
-	@GetMapping( "/index.html")
+	@GetMapping("index.html")
 	public String index2() {
 		return "index";
 	}
 	
-	@GetMapping ("about.html")
+	@GetMapping("about.html")
 	public String about() {
 		return "about";
 	}
-	@GetMapping ("blog.html")
+	@GetMapping("blog.html")
 	public String blog() {
-		return "about";
+		return "blog";
 	}
-	@GetMapping ("codes.html")
+	@GetMapping("codes.html")
 	public String codes() {
-		return "about";
+		return "codes";
 	}
-	@GetMapping ("contact.html")
+	@GetMapping("contact.html")
 	public String contact() {
-		return "about";
+		return "contact";
 	}
-	@GetMapping ("menu.html")
+	@GetMapping("menu.html")
 	public String menu() {
-		return "about";
+		return "menu";
 	}
-	@GetMapping ("single.html")
+	@GetMapping("single.html")
 	public String single() {
-		return "about";
+		return "single";
 	}
 	
 }
