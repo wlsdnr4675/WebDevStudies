@@ -7,13 +7,11 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Address_File {
+public class AddressFile {
+	
 	private long seqf;
 	private String ofname;
 	private String sfname;
 	private long fsize;
-	
-	
-	
-
+	private long seq;
 }

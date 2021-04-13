@@ -16,6 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import lombok.extern.log4j.Log4j;
 import soo.md.domain.Address;
+import soo.md.domain.AddressFile;
 import soo.md.service.AddressService;
 import soo.md.service.FileUploadService;
 
@@ -26,8 +27,7 @@ import soo.md.service.FileUploadService;
 public class AddressController {
 	@Autowired
 	private AddressService addressService;
-	@Autowired
-	private FileUploadService fileUploadService;
+
 	
 	@GetMapping("list.do")
 	public ModelAndView list() {
@@ -48,33 +48,39 @@ public class AddressController {
 	@PostMapping("write.do")
 	public String write(Address address, @RequestParam ArrayList<MultipartFile> files) {
 		log.info("#name: " + address.getName() + ", addr: " + address.getAddr());
+		ArrayList<AddressFile> uploadedFileList = null;
+		
 		
 		for(MultipartFile file: files) {
 			String ofname = file.getOriginalFilename();
 			if(ofname != null) ofname = ofname.trim();
 			if(ofname.length() != 0) {
-				fileUploadService.saveStore(file);
 				log.info("================== file start ==================");
 	            log.info("파일 이름: "+file.getName());
-	            log.info("저장 이름 : "+fileUploadService.saveStore(file));
 	            log.info("파일 실제 이름: "+file.getOriginalFilename());
 	            log.info("파일 크기: "+file.getSize());
 	            log.info("content type: "+file.getContentType());
 	            log.info("================== file   END ==================");
 	            
-	            addressService.insertFile(file);
 
 		}
 	}
+		try {
+			uploadedFileList =  addressService.insertS(address, files);
+		}
+		catch (Exception e) {
+			addressService.removeFiles();
+			}
 		
-		addressService.insertS(address);
+		log.info("uploadedFileList: " + uploadedFileList);
+		
 				
 		return "redirect:list.do";
 	}
 	@GetMapping("del.do")
 	public String delete(long seq) {
+		addressService.removeFiles(seq);
 		addressService.deleteS(seq);
-		
 		return "redirect:list.do";
 	}
 }

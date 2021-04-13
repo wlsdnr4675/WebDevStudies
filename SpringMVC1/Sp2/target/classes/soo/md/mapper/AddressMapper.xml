@@ -12,13 +12,28 @@
 	<select id="read" parameterType="long" resultType="Address">
 		select * from ADDRESS where SEQ = #{SEQ}
 	</select>
+	<!-- 
 	<insert id="insert" parameterType="Address">
 		insert into ADDRESS(name, addr, rdate) values(#{name}, #{addr}, now())
 	</insert>
-	<insert id="insertFile" parameterType="map">
-		insert into ADDRESS_FILE (OFNAME, SFNAME, FSIZE) values(#{OFNAME}, #{SFNAME}, #{FSIZE})
+	 -->
+	 
+	 <insert id="insertSelectKey" parameterType="Address">
+	 	<selectKey keyProperty="seq" order="BEFORE" resultType="Long">
+	 		select max(seq)+1 from address 
+	 	</selectKey>
+		insert into ADDRESS(seq, name, addr, rdate) values(#{seq}, #{name}, #{addr}, now())
+	</insert>
+	
+	<insert id="insertF" parameterType="AddressFile">
+		insert into ADDRESS_FILE (ofname, sfname, fsize, seq) values(#{ofname}, #{sfname}, #{fsize}, #{seq})
 	</insert>
 	<delete id="delete" parameterType="long">
 	    delete from ADDRESS where SEQ= #{SEQ}
 	</delete>
+	
+	<select id="fileListForRemove" parameterType="long" resultType="AddressFile">
+		select * from ADDRESS_FILE where SEQ = #{SEQ}
+	</select>
+	
 </mapper>

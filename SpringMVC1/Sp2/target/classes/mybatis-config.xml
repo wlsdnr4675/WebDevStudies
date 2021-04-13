@@ -6,6 +6,7 @@
 <configuration>
    <typeAliases>
    	   <typeAlias alias="Address" type="soo.md.domain.Address"/>
+   	   <typeAlias alias="AddressFile" type="soo.md.domain.AddressFile"/>
    	   <typeAlias alias="Board" type="soo.md.domain.Board"/>
    </typeAliases>
    <mappers>

@@ -103,8 +103,6 @@ public class FileController {
 	        }else {
 	        	return new ModelAndView("redirect:list.do");
 	        }
-	    
-		
 	}
 	
 }
