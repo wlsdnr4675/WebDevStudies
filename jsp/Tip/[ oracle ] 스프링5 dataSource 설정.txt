@@ -1,0 +1,23 @@
+[ oracle ] 스프링5 dataSource 설정 ( root-context.xml + pom.xml )
+
+(1) root-context.xml
+<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+	<property name="driverClassName"
+		value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
+	<property name="jdbcUrl"
+		value="jdbc:log4jdbc:oracle:thin:@localhost:1521:JAVA"></property>
+	<property name="username" value="scott"></property>
+	<property name="password" value="tiger"></property>
+</bean>
+
+<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource"
+	destroy-method="close">
+	<constructor-arg ref="hikariConfig" />
+</bean>
+
+(2) pom.xml
+<dependency>
+	<groupId>com.oracle.database.jdbc</groupId>
+	<artifactId>ojdbc6</artifactId>
+	<version>11.2.0.4</version>
+</dependency>

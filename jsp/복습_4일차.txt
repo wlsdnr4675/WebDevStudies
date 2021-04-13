@@ -1,0 +1,62 @@
+< 4일차 복습 >
+
+CRUD ( Create Read Update Delete )
+
+(1) View by Designer 
+
+(2) DB table by PM 
+    
+    cf) PM: 설계(HW,SW), 스케쥴, 인력  
+    
+(3) MVC 메커니즘 
+   View <-> Controller <->  Model(S+D) -> DB
+
+(4) 파일제작 순서 
+    1) 데이터 핸들링 
+       Dao.java + DaoImpl.java 
+       Mapper.java + Mapper.xml 
+
+    2) 비지니스 로직 
+       Service.java + ServiceImpl.java 
+
+    3) 요청과 응답 조정  
+       Controller : View -> (param) -> Service.. -> (model) -> View 
+
+    4) View ( jsp, .. )
+       <%@ %> <%! %> <% %> <jsp:XXX > ${} <c:XXX >
+
+    
+(5) 면접 단골 
+    1) redirect : 새로운 요청이 계속 발생할 수 있는 URL을 리턴  
+    2) forward : 기존의 요청을 유지해서 다른 페이지에서 처리해줄 수 있음  
+       
+
+(6) component-scan
+    하위 클래스로 스프링이 객체를 만들고 관리해주는 '패키지'를 지정해는 역할 
+
+
+(7) API
+    1) mybatis
+    https://mybatis.org/mybatis-3/ko/sqlmap-xml.html
+
+    2) jstl
+    https://docs.oracle.com/javaee/5/jstl/1.1/docs/tlddocs/
+
+
+(8) 제약조건( Contraint ) 5가지 => '무결성'을 보장하기 위해   
+   - primary key ( 유일 + Not Null ) 
+   - unique ( 유일 ) 
+   - foreign key 
+   - not null 
+   - check 
+
+   ex) 부서 (부모table) 
+      - 부서번호(U or P)  
+      - 부서이름 
+      - 부서위치
+ 
+   ex) 사원 (자식table) 
+      - 사번 
+      - 이름 
+      - 부서번호 
+    

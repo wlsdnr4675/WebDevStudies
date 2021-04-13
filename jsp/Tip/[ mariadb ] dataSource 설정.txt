@@ -1,0 +1,25 @@
+[ mariadb ] dataSource 설정 ( root-context.xml + pom.xml ) 
+
+(1) root-context.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig"> 
+		<property name="driverClassName" value="org.mariadb.jdbc.Driver"></property> 
+		<property name="jdbcUrl" value="jdbc:mariadb://127.0.0.1:3306/root?useSSL=false&amp;serverTimezone=Asia/Seoul"></property> 
+		<property name="username" value="root"></property> 
+		<property name="password" value="root"></property> 
+	</bean>
+	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource"
+		destroy-method="close">
+		<constructor-arg ref="hikariConfig" />
+	</bean>
+</beans>
+
+(2) pom.xml
+<dependency>
+	<groupId>org.mariadb.jdbc</groupId>
+	<artifactId>mariadb-java-client</artifactId>
+	<version>2.7.2</version>
+</dependency>
