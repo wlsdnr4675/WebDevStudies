@@ -14,3 +14,5 @@ public class Address {
 	 private String addr;
 	 private Date rdate;
 }
+
+

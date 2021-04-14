@@ -10,6 +10,8 @@ import soo.md.domain.AddressFile;
 
 public interface AddressService {
 	List<Address> listS();
+	
+	
 	//void insertS(Address address)
 	ArrayList<AddressFile> insertS(Address address, ArrayList<MultipartFile> files);
 	void deleteS(long seq);
