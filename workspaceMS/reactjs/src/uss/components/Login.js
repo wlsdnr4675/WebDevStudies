@@ -1,12 +1,11 @@
-import HomeFooter from "../../cmm/components/HomeFooter"
-import Navbar from "../../cmm/components/Navbar"
-import LoginForm from "./LoginForm"
+
+import LoginForm from "uss/components/LoginForm"
 
 const Login = () => {
     return (<> 
-        <Navbar></Navbar>
+        
         <LoginForm></LoginForm>
-        <HomeFooter></HomeFooter>
+        
     </> );
 }
  

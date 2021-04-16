@@ -1,25 +1,20 @@
 import React from 'react';
-import './Home.css'
-import '../cmmCss/CmmCss.css';
-import Navbar from './Navbar';
-import HomeFooter from './HomeFooter';
-import WhereToFindMe from './WhereToFindMe';
-import WhatAmI from './WhatAmI';
-import WhoAmI from './WhoAmI';
+import 'cmm/cmmCss/Home.css'
+import 'cmm/cmmCss/CmmCss.css';
+import WhereToFindMe from 'cmm/components/WhereToFindMe';
+import WhatAmI from 'cmm/components/WhatAmI';
+import WhoAmI from 'cmm/components/WhoAmI';
 
 
 const Home = () => {
 
 
     return (<>
-
-        <Navbar/>
+     
         <WhoAmI/>
         <WhatAmI/>
         <WhereToFindMe/>
-        <HomeFooter/>
-
-
+       
      </>);
     
 }

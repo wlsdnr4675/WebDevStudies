@@ -1,5 +1,5 @@
 import React from 'react';
-import './style/UserDetail.css';
+import 'uss/components/style/UserDetail.css';
 
 const UserDetail = () => {
     return (

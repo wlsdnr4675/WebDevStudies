@@ -1,21 +1,33 @@
 import { Route } from 'react-router-dom'
-import './App.css'
-import ArticleDetail from './board/components/ArticleDetail';
-import ArticleList from './board/components/ArticleList';
-import ArticleWrite from './board/components/ArticleWrite';
-import Home from './cmm/components/Home';
-import Login from './uss/components/Login';
-import SignUp from './uss/components/SignUp';
+import 'App.css'
+import {ArticleDetail, ArticleList, ArticleWrite, ArticleUpdate} from 'article/index';
+import {SeoulCCTV, News} from 'board/index';
+import {Home, HomeFooter, Navbar} from 'cmm/index';
+import {Login, SignUp, UserDetail} from 'uss/index';
+
+
 
 const App = () => {
   return (
     <div className="App">
-      <Route exact path='/board/article-list' component={ArticleList}></Route>
-      <Route exact path='/board/article-detail' component={ArticleDetail}></Route>
-      <Route exact path='/board/article-write' component={ArticleWrite}></Route>
+      <Navbar></Navbar>
+      <Route exact path='/article/article-list' component={ArticleList}></Route>
+      <Route exact path='/article/article-detail' component={ArticleDetail}></Route>
+      <Route exact path='/article/article-write' component={ArticleWrite}></Route>
+      <Route exact path='/article/article-update' component={ArticleUpdate}></Route>
+     
       <Route exact path='/login' component={Login}></Route>
       <Route exact path='/sign-up' component={SignUp}></Route>
-      <Route exact path='/home' component={Home}></Route>
+      <Route exact path='/' component={Home}></Route>
+      <Route exact path='/user-detail' component={UserDetail}></Route>
+
+      
+      <Route exact path='/board/news' component={News}></Route>
+      <Route exact path='/board/seoul-cctv' component={SeoulCCTV}></Route>
+     
+
+
+      <HomeFooter></HomeFooter>
     </div>
   );
 }

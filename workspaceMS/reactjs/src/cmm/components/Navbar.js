@@ -1,4 +1,6 @@
 import React from 'react';
+import 'cmm/cmmCss/Home.css';
+import {Link} from 'react-router-dom';
 
 const Navbar = () => {
     return ( <> 
@@ -11,14 +13,15 @@ const Navbar = () => {
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>                        
             </button>
-            <a className="navbar-brand" href="#">Me</a>
+            <a className="navbar-brand">Me</a>
             </div>
             <div className="collapse navbar-collapse" id="myNavbar">
             <ul className="nav navbar-nav navbar-right">
                 <li><a href="#">WHO</a></li>
                 <li><a href="#">WHAT</a></li>
                 <li><a href="#">WHERE</a></li>
-                <li><a href="#">BOARD</a></li>
+                <li><Link to={"/board/news"}>NEWS</Link></li>
+                <li><Link to={"/board/seoul-cctv"}>SeoulCCTV</Link></li>
             </ul>
             </div>
         </div>
