@@ -1,6 +1,6 @@
 import React from 'react';
-import './styles/ArticleListCss.css';
-const ArticleListFrom = () => {
+import './style/ArticleListCss.css';
+const ArticleListForm = () => {
     return ( <>
             <h2>HTML Table</h2>
 
@@ -45,4 +45,4 @@ const ArticleListFrom = () => {
     </> );
 }
  
-export default ArticleListFrom;
+export default ArticleListForm;
