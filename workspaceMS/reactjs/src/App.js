@@ -6,7 +6,6 @@ import {Home, HomeFooter, Navbar} from 'cmm/index';
 import {Login, SignUp, UserDetail} from 'uss/index';
 
 
-
 const App = () => {
   return (
     <div className="App">
