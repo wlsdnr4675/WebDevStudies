@@ -1,0 +1,13 @@
+table {
+  table-layout: auto;
+  color: black;
+  margin: auto;
+  text-align: center;
+}
+
+td,
+th {
+  border: 1px solid black;
+  text-align: center;
+  width: 5%;
+}

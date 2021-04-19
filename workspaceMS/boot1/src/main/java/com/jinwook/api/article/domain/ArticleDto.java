@@ -14,4 +14,5 @@ public class ArticleDto {
     private String subject;
     private String content;
     private String rdate;
+
 }

@@ -22,6 +22,7 @@ const Navbar = () => {
                 <li><a href="#">WHERE</a></li>
                 <li><Link to={"/board/news"}>NEWS</Link></li>
                 <li><Link to={"/board/seoul-cctv"}>SeoulCCTV</Link></li>
+                <li><Link to={"/board/counter"}>COUNTER</Link></li>
             </ul>
             </div>
         </div>

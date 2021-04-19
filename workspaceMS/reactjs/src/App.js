@@ -1,7 +1,7 @@
 import { Route } from 'react-router-dom'
 import 'App.css'
 import {ArticleDetail, ArticleList, ArticleWrite, ArticleUpdate} from 'article/index';
-import {SeoulCCTV, News} from 'board/index';
+import {SeoulCCTV, News, Counter, ReduxCounter} from 'board/index';
 import {Home, HomeFooter, Navbar} from 'cmm/index';
 import {Login, SignUp, UserDetail} from 'uss/index';
 
@@ -23,6 +23,10 @@ const App = () => {
       
       <Route exact path='/board/news' component={News}></Route>
       <Route exact path='/board/seoul-cctv' component={SeoulCCTV}></Route>
+      <Route exact path='/board/counter' component={Counter}></Route>
+      <Route exact path='/board/redux-counter' component={ ReduxCounter } />
+
+
      
 
 
