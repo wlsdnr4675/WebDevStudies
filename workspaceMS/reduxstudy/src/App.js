@@ -1,26 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-import Counter from './counter/components/Counter';
 
-function App() {
+import Counter from './counter/components/Counter';
+import { Link, Route } from 'react-router-dom';
+// import ReduxCounter from './counter/components/ReduxCounter';
+import CounterContainer from './counter/container/CounterContainer'
+
+const App = () => {
   return (
+    <>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <Counter></Counter>
+    <Route exact path="/counter/counter-container" component={CounterContainer}></Route>
     </div>
+    </>
   );
 }
 

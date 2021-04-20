@@ -24,7 +24,7 @@ const Counter = () => {
             <span>{count}</span>
             <button
             aria-label="-"
-            onClick={(()=>{setCount( count - 1 )})}>
+            onClick={()=>{setCount( count - 1 )}}>
                 -
             </button>
         </div>
