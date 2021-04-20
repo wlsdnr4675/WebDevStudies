@@ -4,15 +4,22 @@ import 'index.css';
 import App from 'App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-import store from './app/store'
+//import store from './app/store'
 import { Provider } from 'react-redux'
+import {createStore,combineReducers}from 'redux';
+// import 'counter/reducer/CounterReducer';
+
+const rootReducer = combineReducers({});
+const store = createStore(rootReducer);
 
 ReactDOM.render(
+  <Provider store={store}>
   <BrowserRouter>
-     <Provider store={store}>
-    <App />
-  </Provider>,
+     
+    <App />,
+  
   </BrowserRouter>,
+  </Provider>,
   document.getElementById('root')
 );
 
