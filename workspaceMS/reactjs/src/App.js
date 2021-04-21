@@ -5,6 +5,7 @@ import {SeoulCCTV, News} from 'board/index';
 import {Counter, ReduxCounter} from 'counter/index';
 import {Home, HomeFooter, Navbar} from 'cmm/index';
 import {Login, SignUp, UserDetail} from 'uss/index';
+import{TodoApp} from 'todo/index';
 
 
 const App = () => {
@@ -26,6 +27,8 @@ const App = () => {
       <Route exact path='/board/seoul-cctv' component={SeoulCCTV}></Route>
       <Route exact path='/counter/counter' component={Counter}></Route>
       <Route exact path='/counter/redux-counter' component={ ReduxCounter } />
+
+      <Route exact path='/todo/todo-app' component={TodoApp}></Route>
 
 
      
