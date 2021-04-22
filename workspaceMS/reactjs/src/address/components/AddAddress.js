@@ -1,9 +1,41 @@
+import { ListAddress } from 'address/index';
+import { addAddress } from 'address/reducer/address.reducer';
 import React, {useState} from 'react'
+import { useCallback } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 const AddAddress = () => {
+    const dispatch = useDispatch();
+    const [address, setAddress] =useState("");
+    const {id, name, email} = address
+    const addressAmount = useSelector(state => state.addressReducer.length)
+
+    const handleChange = useCallback(e => {
+        e.preventDefault();
+        const {name, value} = e.target;
+        setAddress(
+            {...address, [name] : value}
+        )
+    },[address])
+
+    const handleClick = useCallback(e =>{
+        e.preventDefault();
+        dispatch(addAddress({
+            id: addressAmount + 1,
+            name,
+            email
+        }))
+        console.log("hjhj", JSON.stringify(address))
+        
+    },[id,name,email])
     return (<>
-      <form ><label htmlFor="new-task">할일 추가</label>
-        <input id="new-task" type="text" style={{width:500}}/>
-        <button style={{width:100, backgroundColor:'green'}} type={"submit"} >Add</button></form>
+      <form onSubmit={handleClick} >
+      <label>Title</label>
+            <input className="u-full-width" type="text" name="name" value={name} onChange={handleChange}/>
+            <label>hashTag</label>
+            <input className="u-full-width" type="text" name="email" value={email} onChange={handleChange} />
+        <button style={{width:100, backgroundColor:'green'}} type={"submit"} onClick={handleClick}>Add</button>
+        </form>
+        
     </> );
 }
  
