@@ -4,15 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Provider} from 'react-redux';
-import {combineReducers, createStore} from 'redux';
+import {applyMiddleware, combineReducers, createStore} from 'redux';
 import { BrowserRouter } from 'react-router-dom';
 import counterReducer from './counter/reducer/Counter.reducer'
 import counterSlice from './counter/reducer/counter.slice'
 import { configureStore } from '@reduxjs/toolkit';
+import logger from "./lib/logger"
 
 const rootReducer = combineReducers({counterReducer, counterSlice})
-// const store = createStore(rootReducer)
-const store = configureStore({reducer: rootReducer})
+const store = createStore(rootReducer,applyMiddleware(logger))
+// const store = configureStore({reducer: rootReducer})
 
 ReactDOM.render(
   

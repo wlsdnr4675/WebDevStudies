@@ -8,9 +8,11 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux'
 import {createStore,combineReducers}from 'redux';
 // import 'counter/reducer/CounterReducer';
+import todoReducer from './todo/reducer/todo.reducer'
+import {configureStore} from '@reduxjs/toolkit'
 
-const rootReducer = combineReducers({});
-const store = createStore(rootReducer);
+const rootReducer = combineReducers({todoReducer});
+const store = configureStore({reducer: rootReducer});
 
 ReactDOM.render(
   <Provider store={store}>

@@ -12,8 +12,8 @@ const CounterSliceContainer = () => {
 
     const dispatch = useDispatch()
 
-    const onIncrease = useCallback(()=>dispatch(increase(1)));
-    const onDecrease = useCallback(()=>dispatch(decrease(1)));
+    const onIncrease = useCallback(()=>dispatch(increase(1)),[dispatch]);
+    const onDecrease = useCallback(()=>dispatch(decrease(1)),[dispatch]);
 
     return (<>
         <CounterSlice number={number} 

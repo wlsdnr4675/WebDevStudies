@@ -1,6 +1,6 @@
 import React, {  } from 'react';
 
-const Todo = () => {
+const CompletedTodos = () => {
     return ( <> 
     <h3>Completed</h3>
       <ul id="completed-tasks">
@@ -14,4 +14,4 @@ const Todo = () => {
       </ul></>);
 }
  
-export default Todo;
+export default CompletedTodos;
