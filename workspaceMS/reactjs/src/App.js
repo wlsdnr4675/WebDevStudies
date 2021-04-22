@@ -7,11 +7,16 @@ import {Home, HomeFooter, Navbar} from 'cmm/index';
 import {Login, SignUp, UserDetail} from 'uss/index';
 import{TodoApp} from 'todo/index';
 
+import {AddressApp, AddAddress} from 'address/index';
 
 const App = () => {
   return (
     <div className="App">
       <Navbar></Navbar>
+
+      <Route exact path='/address/address-app' component={AddressApp}></Route>
+      <Route exact path='/address/add-address' component={AddAddress}></Route>
+
       <Route exact path='/article/article-list' component={ArticleList}></Route>
       <Route exact path='/article/article-detail' component={ArticleDetail}></Route>
       <Route exact path='/article/article-write' component={ArticleWrite}></Route>

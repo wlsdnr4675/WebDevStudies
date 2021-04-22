@@ -6,20 +6,20 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 //import store from './app/store'
 import { Provider } from 'react-redux'
-import {createStore,combineReducers}from 'redux';
+import {createStore,combineReducers, applyMiddleware}from 'redux';
 // import 'counter/reducer/CounterReducer';
 import todoReducer from './todo/reducer/todo.reducer'
+import addressReducer from './address/reducer/address.reducer'
 import {configureStore} from '@reduxjs/toolkit'
+import logger from "./lib/logger"
 
-const rootReducer = combineReducers({todoReducer});
-const store = configureStore({reducer: rootReducer});
+const rootReducer = combineReducers({todoReducer,addressReducer});
+const store = configureStore({reducer: rootReducer},applyMiddleware(logger));
 
 ReactDOM.render(
   <Provider store={store}>
   <BrowserRouter>
-     
     <App />,
-  
   </BrowserRouter>,
   </Provider>,
   document.getElementById('root')

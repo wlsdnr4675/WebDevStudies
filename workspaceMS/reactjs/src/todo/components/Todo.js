@@ -1,17 +1,10 @@
-import React, {  } from 'react';
+import React from 'react'
 
-const Todo = () => {
-    return ( <> 
-    <h3>Completed</h3>
-      <ul id="completed-tasks">
-        <li>
-          <input type="checkbox" checked=""/>
-          <label>See the Doctor</label>
-          <input type="text"/>
-          <button className="edit">Edit</button>
-          <button className="delete">Delete</button>
-        </li>
-      </ul></>);
+const Todo = ({todo}) => {
+    return (<div style={{width:600}}>
+        <input type="checkbox" style={{width:100}}/>
+        <span style={{width:400}}> {todo.text} </span>
+        <button style={{width:100, backgroundColor:'red'}}>삭제</button>
+    </div>)
 }
- 
 export default Todo;
