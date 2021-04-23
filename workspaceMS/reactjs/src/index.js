@@ -8,12 +8,12 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux'
 import {createStore,combineReducers, applyMiddleware}from 'redux';
 // import 'counter/reducer/CounterReducer';
-import todoReducer from './todo/reducer/todo.reducer'
+import todoSlice from './todo/reducer/todo.reducer'
 import addressReducer from './address/reducer/address.reducer'
 import {configureStore} from '@reduxjs/toolkit'
 import logger from "./lib/logger"
 
-const rootReducer = combineReducers({todoReducer,addressReducer});
+const rootReducer = combineReducers({todoSlice,addressReducer});
 const store = configureStore({reducer: rootReducer},applyMiddleware(logger));
 
 ReactDOM.render(

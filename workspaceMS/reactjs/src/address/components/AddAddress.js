@@ -24,9 +24,9 @@ const AddAddress = () => {
             name,
             email
         }))
-        console.log("hjhj", JSON.stringify(address))
+        console.log("어드레스", JSON.stringify(address))
         
-    },[id,name,email])
+    },[id,address])
     return (<>
       <form onSubmit={handleClick} >
       <label>Title</label>

@@ -5,7 +5,7 @@ import {addTodo, todos} from 'todo/reducer/todo.reducer'
 import { useSelector } from 'react-redux'
 const TodoApp = () => {
     
-    const todos = useSelector(state => (state.todoReducer))
+    const todos = useSelector(state => (state.todoSlice))
   
 
     return (<div >
