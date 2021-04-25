@@ -10,6 +10,7 @@ const CounterContainer = () => {
     const dispatch = useDispatch();
     const onIncrease = useCallback(()=> dispatch(increase()),[dispatch]);
     const onDecrease = useCallback(()=> dispatch(decrease()),[dispatch]);
+
     return (<> 
         <ReduxCounter number={number} onIncrease={onIncrease} onDecrease={onDecrease}/>
      </>);

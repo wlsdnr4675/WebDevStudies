@@ -15,4 +15,15 @@ public class ArticleDto {
     private String content;
     private String rdate;
 
+    public void setWriter(String writer){
+        this.writer = writer;
+    }
+    public String getWriter(){
+        return this.writer;
+    }
+
+    public String toString(){
+        return this.writer;
+    }
+
 }

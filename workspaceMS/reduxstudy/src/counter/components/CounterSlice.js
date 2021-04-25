@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 
 const CounterSlice = React.memo(({ number, onIncrease, onDecrease}) =>{
     
-    console.log("n",number);
+    console.log("number: ",number);
     console.log("i",onIncrease);
     console.log("d",onDecrease);
     return (<>
