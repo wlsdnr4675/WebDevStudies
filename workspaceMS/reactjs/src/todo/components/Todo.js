@@ -33,8 +33,7 @@ const Todo = ({todo}) => {
         <span style={{width:400}}><del>{todo.text}</del></span>
         ) : (
         <span style={{width:400}}> {todo.text} </span>
-        ) }
-        
+        )}
         <button style={{width:100, backgroundColor:'red'}} onClick={handleClick}>삭제</button>
     </div>
     )

@@ -5,6 +5,7 @@ const AddTodo = ({addTodo}) => {
     const [input, setInput] = useState('')
     
     const dispatch = useDispatch()
+    
     const addTask = (value) => {
        dispatch(addTodo(value))
       const taskInput = document.getElementById("new-task")
